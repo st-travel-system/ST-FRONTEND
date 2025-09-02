@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Manrope", serif;
+}
+.bg-primary {
+    --tw-bg-opacity: 1;
+    background-color: rgb(45 10 68 / var(--tw-bg-opacity));
+}
+.text-primary {
+    --tw-bg-opacity: 1;
+    color: rgb(45 10 68 / var(--tw-bg-opacity));
+}
+
+.data-\[state\=on\]\:text-primary[data-state="on"] {
+    --tw-text-opacity: 1;
+    color: rgb(45 10 68 / var(--tw-text-opacity));
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+/* .toggle-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  } */
+
+  .toggle-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; /* Evita que bloquee los clics en otros elementos */
+}
+
+.toggle-button {
+    pointer-events: auto; /* Permite la interacción solo en los botones */
+}
+
+  
+  nav {
+    z-index: 100;
+  }
+  
+/* Estilos generales para los navegadores de escritorio y pantallas grandes */
+.slick-arrow-left, .slick-arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-arrow-left {
+  left: 0;
+}
+
+.slick-arrow-right {
+  right: 0;
+}
+
+.slick-arrow-left:hover, .slick-arrow-right:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 25px!important;
+  line-height: 1;
+  opacity: .75;
+  color: #888!important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.padding-custom {
+padding: 0 4rem !important;
+}
+
+/* Estilos para dispositivos móviles: ocultar los elementos */
+@media (max-width: 768px) {
+  .slick-arrow-left, .slick-arrow-right, .slick-prev:before, .slick-next:before, .padding-custom {
+      display: none !important;
+  }
+}
+
+
+
+
+/* Estilos generales para la paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+  background-color: #5B2C7C;
+  color: #fff;
+}
+
+.active .page-link {
+  background-color: #5B2C7C;
+  color: #fff;
+  border-color: #5B2C7C;
+}
+
+/* Estilos para los botones de anterior y siguiente */
+.pagination .page-item:first-child .page-link {
+  border-radius: 5px 0 0 5px;
+}
+
+.pagination .page-item:last-child .page-link {
+  border-radius: 0 5px 5px 0;
+}
+
+/* Estilo para los puntos suspensivos (cuando hay un salto de páginas) */
+.break {
+  padding: 10px 15px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #333;
+}

@@ -1,0 +1,82 @@
+/* src/app/styles/tourStyles.css */
+
+.tour-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .editable-section {
+    margin-bottom: 20px;
+  }
+  
+  .tour-image-card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que las imágenes no sobresalgan */
+  }
+  
+  .carousel-container {
+    max-width: 700px; /* Limitar el ancho del carrusel */
+    height: 500px; /* Limitar el alto del carrusel */
+    margin: 0 auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .carousel-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Para que la imagen se ajuste bien sin deformarse */
+  }
+  
+  .MuiButton-root {
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .MuiDialogActions-root {
+    padding: 16px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* .MuiTypography-h6 {
+    font-weight: 600;
+    color: #333;
+  } */
+  
+  /* Estilos adicionales para el carrusel */
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
+  
+  .slick-dots {
+    bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+  }
+  
+  .slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .slick-prev, .slick-next {
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .MuiIconButton-root {
+    border-radius: 50%;
+  }
+  
