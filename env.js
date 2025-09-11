@@ -1,5 +1,5 @@
 const DOMAIN_FRONT = process.env.DOMAIN_FRONT || "http://localhost:3000/";
-const DOMAIN_BACK = process.env.DOMAIN_BACK || "http://localhost:3002/api";
+const DOMAIN_BACK = process.env.NEXT_PUBLIC_DOMAIN_BACK || "http://localhost:3002/api";
 
 
 //
