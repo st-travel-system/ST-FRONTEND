@@ -26,6 +26,7 @@ interface HorizontalFilterProps {
 }
 
 const regions: Region[] = [
+  { id: "Lujo", name: "Lujo", iconUrl: "/filtros/Lujo.png" },
   { id: "europa", name: "Europa", iconUrl: "/filtros/europa.png" },
   { id: "medio-oriente", name: "Medio Oriente", iconUrl: "/filtros/medio_oriente.png" },
   { id: "paris", name: "Paris", iconUrl: "/filtros/paris.png" },

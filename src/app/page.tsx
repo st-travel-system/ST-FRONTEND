@@ -421,7 +421,7 @@ useEffect(() => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-center col-span-3">No se encontraron tours.</div>
+                    <div className="text-center col-span-3">Aun no hay tours disponibles.</div>
                   )}
                </div>
                  {/* Paginación */}
