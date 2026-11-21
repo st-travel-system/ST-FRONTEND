@@ -1,0 +1,243 @@
+
+/* ==========================================
+   OLARA POPUP - ST TRAVEL
+   Archivo: OlaraPopup.module.css
+   Diseño responsive: escritorio y móvil
+   ========================================== */
+
+/* Fondo oscuro detrás del popup */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(28, 12, 23, 0.75);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow-y: auto;
+}
+
+/* Contenedor principal */
+.modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  width: min(100%, 950px);
+  max-height: calc(100dvh - 40px);
+  overflow: hidden;
+  border-radius: 24px;
+  background: #f5ebe3;
+  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de cierre */
+.close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  color: #4b0c20;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Fotografía editorial */
+.photo {
+  min-height: 510px;
+  background-image: url("/olara/olara-popup.webp");
+  background-size: cover;
+  background-position: center;
+  background-color: #9a8885;
+}
+
+/* Contenido del popup */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 52px;
+  overflow-y: auto;
+  color: #4b0c20;
+}
+
+/* Identidad OLARA */
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 39px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+/* Línea dorada decorativa */
+.line {
+  width: 100%;
+  height: 1px;
+  margin: 18px 0 24px;
+  background: #c5a065;
+}
+
+/* Título editorial */
+.title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 3.4vw, 47px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Texto descriptivo */
+.description {
+  margin: 25px 0 28px;
+  color: #6b565d;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Botón principal */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 55px;
+  padding: 0 34px;
+  border-radius: 50px;
+  background: #540b20;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+.cta:hover {
+  background: #75203b;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Enlace secundario */
+.later {
+  align-self: flex-start;
+  margin: 18px 0 0 35px;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  color: #6b565d;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Accesibilidad */
+.close:focus-visible,
+.cta:focus-visible,
+.later:focus-visible {
+  outline: 3px solid #c5a065;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   VERSIÓN MÓVIL
+   ========================================== */
+
+@media (max-width: 767px) {
+
+  .overlay {
+    padding: 14px;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 390px);
+    max-height: calc(100dvh - 28px);
+    overflow-y: auto;
+    border-radius: 22px;
+  }
+
+  .photo {
+    flex-shrink: 0;
+    min-height: 0;
+    height: clamp(140px, 24dvh, 210px);
+    background-position: center 40%;
+  }
+
+  .close {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .content {
+    align-items: center;
+    padding: 24px 25px 30px;
+    overflow: visible;
+    text-align: center;
+  }
+
+  .brand {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .line {
+    margin: 12px 0 18px;
+  }
+
+  .title {
+    font-size: clamp(28px, 8vw, 39px);
+    line-height: 1.08;
+    letter-spacing: -1px;
+  }
+
+  .description {
+    margin: 18px 0 23px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cta {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .later {
+    align-self: center;
+    margin: 15px 0 0;
+  }
+}
+
+/* Usuarios con movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .cta {
+    transition: none;
+  }
+}
