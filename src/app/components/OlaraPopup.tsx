@@ -11,7 +11,14 @@ import styles from "./OlaraPopup.module.css";
 const POPUP_ENABLED = true;
 const POPUP_DELAY = 10000;
 const POPUP_DISMISS_DAYS = 3;
-const POPUP_DEVICE = "both";
+
+/*    const POPUP_DEVICE = "both"; se sustituye por
+------- TypeScript interpreta que esa constante siempre será "both", por lo que considera imposible que sea igual a "desktop" o "mobile".
+--------*/
+type PopupDevice = "both" | "desktop" | "mobile";
+const POPUP_DEVICE: PopupDevice =
+  (process.env.NEXT_PUBLIC_OLARA_POPUP_DEVICE as PopupDevice) || "both";
+
 
 const STORAGE_KEY = "st_olara_popup_until";
 
