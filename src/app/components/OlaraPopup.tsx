@@ -3,6 +3,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./OlaraPopup.module.css";
+import { Instrument_Serif, Inter } from "next/font/google";
 
 /* ==========================================
    CONFIGURACIÓN DEL POPUP OLARA
@@ -11,6 +12,19 @@ import styles from "./OlaraPopup.module.css";
 const POPUP_ENABLED = true;
 const POPUP_DELAY = 10000;
 const POPUP_DISMISS_DAYS = 3;
+const olaraSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--olara-font-serif",
+  display: "swap",
+});
+
+const olaraSans = Inter({
+  subsets: ["latin"],
+  variable: "--olara-font-sans",
+  display: "swap",
+});
 
 /*    const POPUP_DEVICE = "both"; se sustituye por
 ------- TypeScript interpreta que esa constante siempre será "both", por lo que considera imposible que sea igual a "desktop" o "mobile".
@@ -168,7 +182,7 @@ export default function OlaraPopup() {
     >
       <section
         ref={modalRef}
-        className={styles.modal}
+        className={`${styles.modal} ${olaraSerif.variable} ${olaraSans.variable}`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="olara-popup-title"
