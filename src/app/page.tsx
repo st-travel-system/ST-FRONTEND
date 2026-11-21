@@ -5,6 +5,7 @@ import SearchBar from "./components/SearchBar";
 import CustomItinerary from "./components/CustomItinerary";
 import AgencyInfo from "./components/AgencyInfo";
 import Footer from "./components/Footer";
+import OlaraPopup from "./components/OlaraPopup";
 import { FeaturedTours } from "./components/FeaturedTours";
 import { TourCard } from "./components/TourCard";
 import { HorizontalFilter } from "./components/HorizontalFilter";
@@ -450,6 +451,7 @@ useEffect(() => {
      <CustomItinerary />
      <AgencyInfo />
      <Footer />
+     <OlaraPopup />
     </>
   )
 }

@@ -1,0 +1,300 @@
+
+/* ==========================================
+   OLARA POPUP - ST TRAVEL
+   Archivo: OlaraPopup.module.css
+   Diseño responsive: escritorio y móvil
+   ========================================== */
+
+/* Fondo oscuro detrás del popup */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(28, 12, 23, 0.75);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow-y: auto;
+}
+
+/* Contenedor principal */
+.modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  width: min(100%, 950px);
+  max-height: calc(100dvh - 40px);
+  overflow: hidden;
+  border-radius: 24px;
+  background: #fbf8f5;
+  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de cierre */
+.close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  color: #4b0c20;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Fotografía editorial */
+/* Fotografía OLARA - Escritorio */
+
+.photo {
+  min-height: 510px;
+  background-image: url("/olara/popup/olara-popup-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #9a8885;
+}
+
+/* Contenido del popup */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 52px;
+  overflow-y: auto;
+  color: #1e1118;
+}
+
+/* Identidad OLARA */
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 39px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+
+/* Logotipo oficial OLARA */
+
+.brandLogo {
+  width: 190px;
+  height: 70px;
+  flex-shrink: 0;
+  background-color: #4b0d17;
+
+  -webkit-mask-image: url("/olara/popup/logo-blanco-sin-slogan.svg");
+  mask-image: url("/olara/popup/logo-blanco-sin-slogan.svg");
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: left center;
+  mask-position: left center;
+}
+
+/* Ajuste para móvil */
+@media (max-width: 767px) {
+  .brandLogo {
+    width: 160px;
+    height: 55px;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+}
+
+
+/* Línea dorada decorativa */
+.line {
+  width: 100%;
+  height: 1px;
+  margin: 18px 0 24px;
+  background: #c5a065;
+}
+
+/* Título editorial */
+
+.title {
+  margin: 0;
+  font-family: var(--olara-font-serif),
+    "Times New Roman", serif;
+  color: #4b0d17;
+  font-size: clamp(32px, 3.4vw, 47px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* Texto descriptivo */
+
+.description {
+  margin: 25px 0 28px;
+  color: #5c4852;
+  font-family: var(--olara-font-sans),
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+/* Botón principal */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 55px;
+  padding: 0 34px;
+  border-radius: 50px;
+  background: #4b0d17;
+  color: #ffffff;
+  font-family: var(--olara-font-sans), Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+   
+
+
+}
+
+.cta:hover {
+  background: #7e2a38;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Enlace secundario */
+.later {
+  align-self: flex-start;
+  margin: 18px 0 0 35px;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  color: #6b565d;
+  font-family: var(--olara-font-sans), Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Accesibilidad */
+.close:focus-visible,
+.cta:focus-visible,
+.later:focus-visible {
+  outline: 3px solid #c5a065;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   VERSIÓN MÓVIL
+   ========================================== */
+
+@media (max-width: 767px) {
+
+  .overlay {
+    padding: 14px;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 390px);
+    max-height: calc(100dvh - 28px);
+    overflow-y: auto;
+    border-radius: 22px;
+  }
+
+  
+/* Fotografía OLARA - Móvil */
+
+.photo {
+  flex-shrink: 0;
+  min-height: 0;
+  height: clamp(140px, 24dvh, 210px);
+  background-image: url("/olara/popup/olara-popup-mobile.png");
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+}
+
+
+  .close {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .content {
+    align-items: center;
+    padding: 24px 25px 30px;
+    overflow: visible;
+    text-align: center;
+  }
+
+  .brand {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .line {
+    margin: 12px 0 18px;
+  }
+
+  
+   .title {
+     font-size: clamp(29px, 8vw, 35px);
+     line-height: 1.08;
+     letter-spacing: -0.02em;
+   }
+
+
+  .description {
+    margin: 18px 0 23px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cta {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .later {
+    align-self: center;
+    margin: 15px 0 0;
+  }
+}
+
+/* Usuarios con movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .cta {
+    transition: none;
+  }
+}
