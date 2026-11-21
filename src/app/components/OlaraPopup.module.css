@@ -85,6 +85,40 @@
   line-height: 1.2;
 }
 
+
+/* Logotipo oficial OLARA */
+
+.brandLogo {
+  width: 190px;
+  height: 70px;
+  flex-shrink: 0;
+  background-color: #4b0c20;
+
+  -webkit-mask-image: url("/olara/popup/logo-blanco-sin-slogan.svg");
+  mask-image: url("/olara/popup/logo-blanco-sin-slogan.svg");
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: left center;
+  mask-position: left center;
+}
+
+/* Ajuste para móvil */
+@media (max-width: 767px) {
+  .brandLogo {
+    width: 160px;
+    height: 55px;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+}
+
+
 /* Línea dorada decorativa */
 .line {
   width: 100%;
