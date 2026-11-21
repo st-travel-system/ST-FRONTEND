@@ -203,25 +203,25 @@ export default function OlaraPopup() {
 
           <div className={styles.line} aria-hidden="true" />
 
-          <h2
-            id="olara-popup-title"
-            className={styles.title}
-          >
-            Descubre el mundo
-            <br />
-            <em>con la libertad</em>
-            <br />
-            de saber elegir.
-          </h2>
+          
+            <h2
+              id="olara-popup-title"
+              className={styles.title}
+            >
+              Aquí comienza una
+              <br />
+              <em>nueva forma de viajar</em>
+            </h2>
+            
+            <p
+              id="olara-popup-description"
+              className={styles.description}
+            >
+              Una comunidad privada para mujeres con acceso a
+              conocimiento, criterio y recomendaciones. Además
+              participas para ganar 2 viajes.
+            </p>
 
-          <p
-            id="olara-popup-description"
-            className={styles.description}
-          >
-            Una comunidad privada para mujeres con acceso
-            a conocimiento, criterio, recomendaciones y
-            oportunidades creadas por ST Travel.
-          </p>
 
           {/* BOTÓN PRINCIPAL */}
 
