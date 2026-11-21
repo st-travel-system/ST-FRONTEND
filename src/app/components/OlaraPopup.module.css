@@ -29,7 +29,7 @@
   max-height: calc(100dvh - 40px);
   overflow: hidden;
   border-radius: 24px;
-  background: #f5ebe3;
+  background: #fbf8f5;
   box-shadow: 0 25px 90px rgba(0, 0, 0, 0.3);
 }
 
@@ -73,7 +73,7 @@
   align-items: flex-start;
   padding: 60px 52px;
   overflow-y: auto;
-  color: #4b0c20;
+  color: #1e1118;
 }
 
 /* Identidad OLARA */
@@ -92,7 +92,7 @@
   width: 190px;
   height: 70px;
   flex-shrink: 0;
-  background-color: #4b0c20;
+  background-color: #4b0d17;
 
   -webkit-mask-image: url("/olara/popup/logo-blanco-sin-slogan.svg");
   mask-image: url("/olara/popup/logo-blanco-sin-slogan.svg");
@@ -128,13 +128,16 @@
 }
 
 /* Título editorial */
+
 .title {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--olara-font-serif),
+    "Times New Roman", serif;
+  color: #4b0d17;
   font-size: clamp(32px, 3.4vw, 47px);
   font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.025em;
 }
 
 .title em {
@@ -142,14 +145,19 @@
   font-weight: 400;
 }
 
+
 /* Texto descriptivo */
+
 .description {
   margin: 25px 0 28px;
-  color: #6b565d;
-  font-family: Arial, sans-serif;
+  color: #5c4852;
+  font-family: var(--olara-font-sans),
+    Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.65;
+  font-weight: 400;
+  line-height: 1.6;
 }
+
 
 /* Botón principal */
 .cta {
@@ -160,18 +168,21 @@
   min-height: 55px;
   padding: 0 34px;
   border-radius: 50px;
-  background: #540b20;
+  background: #4b0d17;
   color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: var(--olara-font-sans), Arial, sans-serif;
   font-size: 17px;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.2s ease,
               transform 0.2s ease;
+   
+
+
 }
 
 .cta:hover {
-  background: #75203b;
+  background: #7e2a38;
   transform: translateY(-2px);
   color: #ffffff;
 }
@@ -184,7 +195,7 @@
   border: none;
   background: transparent;
   color: #6b565d;
-  font-family: Arial, sans-serif;
+  font-family: var(--olara-font-sans), Arial, sans-serif;
   font-size: 14px;
   text-decoration: underline;
   cursor: pointer;
@@ -254,11 +265,13 @@
     margin: 12px 0 18px;
   }
 
-  .title {
-    font-size: clamp(28px, 8vw, 39px);
-    line-height: 1.08;
-    letter-spacing: -1px;
-  }
+  
+   .title {
+     font-size: clamp(29px, 8vw, 35px);
+     line-height: 1.08;
+     letter-spacing: -0.02em;
+   }
+
 
   .description {
     margin: 18px 0 23px;
