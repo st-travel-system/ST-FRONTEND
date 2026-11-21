@@ -197,9 +197,13 @@ export default function OlaraPopup() {
         {/* CONTENIDO */}
 
         <div className={styles.content}>
-          <div className={styles.brand}>
-            OLARA
-          </div>
+          
+         <div
+           className={styles.brandLogo}
+           role="img"
+           aria-label="OLARA"
+         />
+
 
           <div className={styles.line} aria-hidden="true" />
 
