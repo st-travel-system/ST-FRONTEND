@@ -54,11 +54,14 @@
 }
 
 /* Fotografía editorial */
+/* Fotografía OLARA - Escritorio */
+
 .photo {
   min-height: 510px;
-  background-image: url("/olara/olara-popup.webp");
+  background-image: url("/olara/popup/olara-popup-desktop.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-color: #9a8885;
 }
 
@@ -180,12 +183,19 @@
     border-radius: 22px;
   }
 
-  .photo {
-    flex-shrink: 0;
-    min-height: 0;
-    height: clamp(140px, 24dvh, 210px);
-    background-position: center 40%;
-  }
+  
+/* Fotografía OLARA - Móvil */
+
+.photo {
+  flex-shrink: 0;
+  min-height: 0;
+  height: clamp(140px, 24dvh, 210px);
+  background-image: url("/olara/popup/olara-popup-mobile.png");
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+}
+
 
   .close {
     top: 12px;
