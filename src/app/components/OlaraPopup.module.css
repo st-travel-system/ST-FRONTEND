@@ -58,7 +58,7 @@
 
 .photo {
   min-height: 510px;
-  background-image: url("/olara/popup/olara-popup-desktop.png");
+  background-image: url("/olara/popup/olara-sttravel-desktop.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -235,7 +235,7 @@
   flex-shrink: 0;
   min-height: 0;
   height: clamp(140px, 24dvh, 210px);
-  background-image: url("/olara/popup/olara-popup-mobile.png");
+  background-image: url("/olara/popup/olara-sttravel-mobile.webp");
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -298,3 +298,29 @@
     transition: none;
   }
 }
+
+
+/* ==========================================
+   AJUSTE FINAL POPUP OLARA - MOVIL
+   Evita desbordamiento horizontal
+   ========================================== */
+
+@media (max-width: 767px) {
+  .overlay {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .modal {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 420px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

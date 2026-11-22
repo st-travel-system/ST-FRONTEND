@@ -10,8 +10,9 @@ import { Instrument_Serif, Inter } from "next/font/google";
    ========================================== */
 
 const POPUP_ENABLED = true;
-const POPUP_DELAY = 10000;
-const POPUP_DISMISS_DAYS = 3;
+const POPUP_DELAY = 4000;
+const POPUP_DISMISS_DAYS = 1;
+const POPUP_CLICK_DISMISS_DAYS = 2;
 const olaraSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
@@ -166,7 +167,7 @@ export default function OlaraPopup() {
 
   function handleOlaraClick() {
     trackEvent("olara_popup_click");
-    saveDismissal(7);
+    saveDismissal(POPUP_CLICK_DISMISS_DAYS);
   }
 
   if (!isOpen) return null;
