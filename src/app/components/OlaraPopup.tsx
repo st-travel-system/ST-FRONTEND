@@ -10,8 +10,8 @@ import { Instrument_Serif, Inter } from "next/font/google";
    ========================================== */
 
 const POPUP_ENABLED = true;
-const POPUP_DELAY = 10000;
-const POPUP_DISMISS_DAYS = 3;
+const POPUP_DELAY = 4000;
+const POPUP_DISMISS_DAYS = 1;
 const olaraSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
