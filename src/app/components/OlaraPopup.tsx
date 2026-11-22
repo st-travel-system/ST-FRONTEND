@@ -9,7 +9,7 @@ import { Instrument_Serif, Inter } from "next/font/google";
    CONFIGURACIÓN DEL POPUP OLARA
    ========================================== */
 
-const POPUP_ENABLED = true;
+const POPUP_ENABLED = false;
 const POPUP_DELAY = 4000;
 const POPUP_DISMISS_DAYS = 1;
 const POPUP_CLICK_DISMISS_DAYS = 2;
